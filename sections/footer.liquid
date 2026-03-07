@@ -1,0 +1,33 @@
+﻿<footer class="site-footer">
+  <div class="page-width footer-grid">
+    <div>
+      <h3>{{ shop.name }}</h3>
+      <p>{{ settings.store_tagline }}</p>
+    </div>
+    <div>
+      <h4>Liens utiles</h4>
+      <ul>
+        <li><a href="{{ routes.all_products_collection_url }}">Tous les produits</a></li>
+        <li><a href="{{ routes.cart_url }}">Panier</a></li>
+        <li><a href="{{ routes.account_login_url }}">Mon compte</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom page-width">
+    <small>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. Tous droits réservés.</small>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_social",
+      "label": "Afficher les réseaux sociaux",
+      "default": true
+    }
+  ]
+}
+{% endschema %}

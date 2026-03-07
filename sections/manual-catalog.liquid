@@ -1,0 +1,171 @@
+<section class="section">
+  <div class="section-head">
+    <h2>{{ section.settings.title }}</h2>
+    <p class="catalog-subtitle">{{ section.settings.subtitle }}</p>
+  </div>
+
+  <div class="product-grid">
+    {% for block in section.blocks %}
+      <article class="product-card" {{ block.shopify_attributes }}>
+        <a class="product-image" href="{{ block.settings.link | default: routes.all_products_collection_url }}">
+          {% if block.settings.image != blank %}
+            {{ block.settings.image | image_url: width: 700 | image_tag: loading: 'lazy', alt: block.settings.title }}
+          {% else %}
+            <div class="placeholder">{{ block.settings.title }}</div>
+          {% endif %}
+        </a>
+        <div class="product-card-content">
+          {% if block.settings.category != blank %}
+            <small class="meta">{{ block.settings.category }}</small>
+          {% endif %}
+          <h3><a href="{{ block.settings.link | default: routes.all_products_collection_url }}">{{ block.settings.title }}</a></h3>
+          {% if block.settings.price != blank %}
+            <p class="price">{{ block.settings.price }}</p>
+          {% endif %}
+          {% if block.settings.compare_price != blank %}
+            <small class="compare-price">{{ block.settings.compare_price }}</small>
+          {% endif %}
+          {% if block.settings.badge != blank %}
+            <small class="badge">{{ block.settings.badge }}</small>
+          {% endif %}
+          {% if block.settings.description != blank %}
+            <p>{{ block.settings.description }}</p>
+          {% endif %}
+          {% if block.settings.rating != blank %}
+            <p class="meta">{{ block.settings.rating }}</p>
+          {% endif %}
+          {% if block.settings.compatibility != blank %}
+            <p class="meta">{{ block.settings.compatibility }}</p>
+          {% endif %}
+          {% if block.settings.delivery != blank %}
+            <p class="meta">{{ block.settings.delivery }}</p>
+          {% endif %}
+          {% if block.settings.guarantee != blank %}
+            <p class="meta">{{ block.settings.guarantee }}</p>
+          {% endif %}
+          {% if block.settings.stock != blank %}
+            <p class="meta">{{ block.settings.stock }}</p>
+          {% endif %}
+          <a class="btn" href="{{ block.settings.link | default: routes.all_products_collection_url }}">
+            {{ block.settings.cta_label | default: 'Voir le produit' }}
+          </a>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Catalogue manuel",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre",
+      "default": "Produits a fort potentiel"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Sous-titre",
+      "default": "Collection initiale Ricky_shop"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_item",
+      "name": "Produit",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Nom produit",
+          "default": "Nom produit"
+        },
+        {
+          "type": "text",
+          "id": "category",
+          "label": "Categorie",
+          "default": "Categorie"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Prix affiche",
+          "default": "Prix"
+        },
+        {
+          "type": "text",
+          "id": "compare_price",
+          "label": "Prix compare",
+          "default": ""
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge promo",
+          "default": ""
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Description produit"
+        },
+        {
+          "type": "text",
+          "id": "rating",
+          "label": "Avis / rating",
+          "default": ""
+        },
+        {
+          "type": "text",
+          "id": "compatibility",
+          "label": "Compatibilite",
+          "default": ""
+        },
+        {
+          "type": "text",
+          "id": "delivery",
+          "label": "Livraison",
+          "default": ""
+        },
+        {
+          "type": "text",
+          "id": "guarantee",
+          "label": "Garantie",
+          "default": ""
+        },
+        {
+          "type": "text",
+          "id": "stock",
+          "label": "Stock",
+          "default": ""
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Lien produit"
+        },
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": "Label bouton",
+          "default": "Voir le produit"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Catalogue manuel"
+    }
+  ]
+}
+{% endschema %}

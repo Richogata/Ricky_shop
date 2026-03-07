@@ -1,0 +1,15 @@
+﻿{
+  "name": "Pied de page",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "settings": {
+        "show_social": true
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

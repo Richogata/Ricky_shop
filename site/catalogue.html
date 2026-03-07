@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ricky_shop - Catalogue</title>
+  <link rel="stylesheet" href="assets/site.css" />
+</head>
+<body>
+  <div class="top">Catalogue clair et propre</div>
+  <header class="header">
+    <div class="container header-wrap">
+      <a class="logo" href="index.html">Ricky_shop</a>
+      <nav class="menu">
+        <a href="index.html">Accueil</a>
+        <a href="catalogue.html">Catalogue</a>
+        <a href="panier.html">Panier</a>
+        <span class="cart-count">Articles: <span data-count>0</span></span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div class="section-head">
+      <h1>Catalogue</h1>
+      <p>Tous les produits, photos claires et filtres simples</p>
+    </div>
+
+    <div class="controls">
+      <input type="search" placeholder="Recherche produit ou marque" data-search />
+      <select data-market><option value="">Tous marches</option></select>
+      <select data-category><option value="">Toutes categories</option></select>
+    </div>
+
+    <div class="grid" data-catalog></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Commande directe WhatsApp disponible sur chaque produit</div>
+  </footer>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

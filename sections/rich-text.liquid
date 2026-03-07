@@ -1,0 +1,15 @@
+﻿<section class="section richtext">
+  <h2>{{ section.settings.title }}</h2>
+  <div>{{ section.settings.content }}</div>
+</section>
+
+{% schema %}
+{
+  "name": "Texte enrichi",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Titre", "default": "Pourquoi Ricky_shop ?" },
+    { "type": "richtext", "id": "content", "label": "Contenu", "default": "<p>Produits sélectionnés, service client réactif et expérience premium.</p>" }
+  ],
+  "presets": [{ "name": "Texte enrichi" }]
+}
+{% endschema %}

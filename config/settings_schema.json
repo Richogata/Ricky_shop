@@ -1,0 +1,23 @@
+﻿{
+  "name": "Ricky Shop Theme",
+  "settings": [
+    {
+      "type": "text",
+      "id": "store_tagline",
+      "label": "Slogan de la boutique",
+      "default": "Des produits premium, livrés vite"
+    },
+    {
+      "type": "color",
+      "id": "color_primary",
+      "label": "Couleur principale",
+      "default": "#0f172a"
+    },
+    {
+      "type": "color",
+      "id": "color_accent",
+      "label": "Couleur accent",
+      "default": "#eab308"
+    }
+  ]
+}

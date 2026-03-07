@@ -1,0 +1,11 @@
+﻿{
+  "general": {
+    "search": {
+      "submit": "Rechercher"
+    },
+    "cart": {
+      "title": "Panier",
+      "empty": "Votre panier est vide"
+    }
+  }
+}

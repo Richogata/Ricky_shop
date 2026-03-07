@@ -1,0 +1,163 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "kicker": "RICKY_SHOP",
+        "title": "Le template pro pour ta boutique",
+        "description": "Design moderne, sections modulaires, pret pour tes produits.",
+        "button_label": "Shop now"
+      }
+    },
+    "manual_catalog": {
+      "type": "manual-catalog",
+      "settings": {
+        "title": "Produits ajoutes",
+        "subtitle": "Donnees pre-remplies, ajoute juste les images et liens"
+      },
+      "blocks": {
+        "calmcarry": {
+          "type": "product_item",
+          "settings": {
+            "title": "CalmCarry (R) - The Glow Company",
+            "category": "Bien-etre / Sante mentale / Anti-anxiete et sommeil",
+            "price": "Prix non affiche - promo -15% avec code NY15",
+            "badge": "Stock limite",
+            "description": "Appareil de micro-courant qui stimule le point d'acupression PC8 dans la paume pour soulager anxiete et insomnie. Sans medicaments, arret auto apres 20 minutes, rechargeable.",
+            "rating": "4.9/5 - 1161 avis - 99% recommandations",
+            "guarantee": "Garantie 100 jours satisfait ou rembourse",
+            "stock": "Stock limite",
+            "cta_label": "Voir le produit"
+          }
+        },
+        "cabin_care": {
+          "type": "product_item",
+          "settings": {
+            "title": "Cabin Care by Ottocast",
+            "category": "Automobile / Accessoires voiture / CarPlay",
+            "price": "EUR 99.99",
+            "compare_price": "EUR 149.00",
+            "badge": "Livraison gratuite",
+            "description": "Adaptateur CarPlay sans fil avec camera arriere 150 degres vision nocturne. Compatible iPhone iOS 10+ et vehicules 2016+ avec CarPlay filaire d'origine.",
+            "compatibility": "Non compatible BMW ni autoradios aftermarket",
+            "guarantee": "Ne stocke ni n'upload de videos",
+            "cta_label": "Voir le produit"
+          }
+        },
+        "air_nova": {
+          "type": "product_item",
+          "settings": {
+            "title": "Air Nova Smart Mouse",
+            "category": "Tech / Accessoires informatiques / Souris",
+            "price": "USD 89",
+            "compare_price": "USD 149",
+            "badge": "Livraison mondiale gratuite",
+            "description": "Souris sans fil modulaire detacheable avec pointeur laser, Bluetooth, multi-appareils, zoom intuitif et controles gestuels pour presentations et taches de precision.",
+            "cta_label": "Voir le produit"
+          }
+        },
+        "travel_adapter": {
+          "type": "product_item",
+          "settings": {
+            "title": "All-in-One Universal Travel Adapter",
+            "category": "Voyage / Accessoires voyage / Electronique",
+            "price": "USD 35.99",
+            "compare_price": "USD 69.99",
+            "badge": "-49%",
+            "description": "Adaptateur universel 150+ pays, prises C/G/A/I, 1 AC + 4 USB, charge 5 appareils, double fusibles et volets de securite. Leger et portable.",
+            "compatibility": "Pas de protection contre surtensions",
+            "cta_label": "Voir le produit"
+          }
+        },
+        "wifi_porter": {
+          "type": "product_item",
+          "settings": {
+            "title": "Wifi Porter",
+            "category": "Tech / Maison connectee / Accessoires Wi-Fi",
+            "price": "USD 39.95 (Maple) / USD 59.95 (Walnut-Inox)",
+            "badge": "En stock",
+            "description": "Boitier bois pour partager le Wi-Fi via NFC ou QR code. Sans batterie. Compatible iPhone iOS 11+ et Android. Ideal Airbnb, bureaux et evenements.",
+            "stock": "Colorful Instructions out of stock - edition noyer inox noir numerotee epuisee",
+            "cta_label": "Voir le produit"
+          }
+        },
+        "p50_torch": {
+          "type": "product_item",
+          "settings": {
+            "title": "P50 Tactical Torch",
+            "category": "Maison / Securite / Outdoor",
+            "price": "CFA 12 000",
+            "compare_price": "CFA 15 000",
+            "badge": "Livraison gratuite capitales",
+            "description": "Lampe torche LED rechargeable USB-C, tres haute luminosite, zoom ajustable, resistante toutes meteo. Utile pour pannes, camping et usage tactique.",
+            "delivery": "Paiement a la livraison disponible",
+            "cta_label": "Voir le produit"
+          }
+        },
+        "lanthome": {
+          "type": "product_item",
+          "settings": {
+            "title": "Pate Dentifrice Lanthome Blanchisseur",
+            "category": "Beaute / Hygiene bucco-dentaire / Blanchiment",
+            "price": "CFA 10 900",
+            "compare_price": "CFA 20 000",
+            "badge": "Livraison gratuite",
+            "description": "Kit blanchiment dentaire: dentifrice + stylo blanchisseur. Resultats visibles des la premiere semaine, compatible dents sensibles.",
+            "delivery": "Paiement a la reception",
+            "cta_label": "Voir le produit"
+          }
+        },
+        "tondeuse_4x1": {
+          "type": "product_item",
+          "settings": {
+            "title": "Tondeuse Professionnelle 4-en-1",
+            "category": "Beaute / Grooming masculin / Tondeuse",
+            "price": "CFA 14 900",
+            "badge": "Stock limite",
+            "description": "Kit de toilettage 4-en-1 cheveux, barbe, nez et oreilles. Lames acier inoxydable, moteur puissant, resultat salon a la maison.",
+            "delivery": "Livraison gratuite au Togo, paiement a la livraison",
+            "stock": "Urgence marketing: stock limite",
+            "cta_label": "Voir le produit"
+          }
+        }
+      },
+      "block_order": [
+        "calmcarry",
+        "cabin_care",
+        "air_nova",
+        "travel_adapter",
+        "wifi_porter",
+        "p50_torch",
+        "lanthome",
+        "tondeuse_4x1"
+      ]
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Produits populaires",
+        "products_to_show": 8
+      }
+    },
+    "featured_product": {
+      "type": "featured-product",
+      "settings": {
+        "title": "Produit star"
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "settings": {
+        "title": "Une boutique prete a vendre",
+        "content": "<p>Envoie-moi tes produits et je les integre directement.</p>"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "manual_catalog",
+    "featured_collection",
+    "featured_product",
+    "rich_text"
+  ]
+}

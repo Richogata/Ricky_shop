@@ -1,0 +1,29 @@
+﻿<section class="section">
+  <div class="section-head">
+    <h2>{{ section.settings.title }}</h2>
+    <a href="{{ section.settings.collection.url | default: routes.all_products_collection_url }}">Voir tout</a>
+  </div>
+
+  <div class="product-grid">
+    {% assign featured_collection = section.settings.collection %}
+    {% if featured_collection != blank %}
+      {% for product in featured_collection.products limit: section.settings.products_to_show %}
+        {% render 'product-card', product: product %}
+      {% endfor %}
+    {% else %}
+      <p>Choisis une collection dans l'éditeur de thème.</p>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collection en avant",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Titre", "default": "Best sellers" },
+    { "type": "collection", "id": "collection", "label": "Collection" },
+    { "type": "range", "id": "products_to_show", "label": "Nombre de produits", "min": 4, "max": 12, "step": 1, "default": 8 }
+  ],
+  "presets": [{ "name": "Collection en avant" }]
+}
+{% endschema %}

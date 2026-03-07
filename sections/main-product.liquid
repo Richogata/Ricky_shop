@@ -1,0 +1,34 @@
+﻿<section class="section">
+  <div class="featured-product">
+    <div>
+      {% if product.featured_image %}
+        {{ product.featured_image | image_url: width: 1000 | image_tag: alt: product.title }}
+      {% endif %}
+    </div>
+    <div>
+      <h1>{{ product.title }}</h1>
+      <p class="price">{{ product.price | money }}</p>
+      <div>{{ product.description }}</div>
+
+      {% form 'product', product %}
+        <select name="id">
+          {% for variant in product.variants %}
+            <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %}>
+              {{ variant.title }} - {{ variant.price | money }}
+            </option>
+          {% endfor %}
+        </select>
+        <button class="btn" type="submit" {% unless product.available %}disabled{% endunless %}>
+          {% if product.available %}Ajouter au panier{% else %}Rupture de stock{% endif %}
+        </button>
+      {% endform %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Produit principal",
+  "settings": []
+}
+{% endschema %}

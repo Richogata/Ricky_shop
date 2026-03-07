@@ -1,0 +1,19 @@
+﻿<article class="product-card">
+  <a href="{{ product.url }}" class="product-image">
+    {% if product.featured_image %}
+      {{ product.featured_image | image_url: width: 700 | image_tag: loading: 'lazy', alt: product.title }}
+    {% else %}
+      <div class="placeholder">Image indisponible</div>
+    {% endif %}
+  </a>
+  <div class="product-card-content">
+    <h3><a href="{{ product.url }}">{{ product.title }}</a></h3>
+    <p class="price">{{ product.price | money }}</p>
+    <form method="post" action="/cart/add">
+      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+      <button type="submit" class="btn" {% unless product.available %}disabled{% endunless %}>
+        {% if product.available %}Ajouter{% else %}Rupture{% endif %}
+      </button>
+    </form>
+  </div>
+</article>

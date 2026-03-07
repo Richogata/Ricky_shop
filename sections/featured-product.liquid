@@ -1,0 +1,35 @@
+﻿<section class="section">
+  <h2>{{ section.settings.title }}</h2>
+  {% assign p = section.settings.product %}
+  {% if p != blank %}
+    <div class="featured-product">
+      <a href="{{ p.url }}">
+        {% if p.featured_image %}
+          {{ p.featured_image | image_url: width: 800 | image_tag: loading: 'lazy', alt: p.title }}
+        {% endif %}
+      </a>
+      <div>
+        <h3><a href="{{ p.url }}">{{ p.title }}</a></h3>
+        <p>{{ p.price | money }}</p>
+        <p>{{ p.description | strip_html | truncate: 180 }}</p>
+        <form method="post" action="/cart/add">
+          <input type="hidden" name="id" value="{{ p.selected_or_first_available_variant.id }}">
+          <button class="btn" type="submit">Ajouter au panier</button>
+        </form>
+      </div>
+    </div>
+  {% else %}
+    <p>Choisis un produit dans l'éditeur de thème.</p>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Produit en avant",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Titre", "default": "Produit du moment" },
+    { "type": "product", "id": "product", "label": "Produit" }
+  ],
+  "presets": [{ "name": "Produit en avant" }]
+}
+{% endschema %}

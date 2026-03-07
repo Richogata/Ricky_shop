@@ -1,0 +1,31 @@
+﻿<section class="section">
+  <h1>Panier</h1>
+
+  {% if cart.item_count == 0 %}
+    <p>Ton panier est vide.</p>
+  {% else %}
+    <form action="{{ routes.cart_url }}" method="post">
+      <div class="cart-list">
+        {% for item in cart.items %}
+          <div class="cart-item">
+            <a href="{{ item.url }}">{{ item.product.title }}</a>
+            <span>{{ item.final_line_price | money }}</span>
+            <input type="number" name="updates[]" value="{{ item.quantity }}" min="0">
+          </div>
+        {% endfor %}
+      </div>
+      <div class="cart-actions">
+        <p>Total: <strong>{{ cart.total_price | money }}</strong></p>
+        <button class="btn" type="submit">Mettre à jour</button>
+        <button class="btn btn-secondary" type="submit" name="checkout">Commander</button>
+      </div>
+    </form>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Panier principal",
+  "settings": []
+}
+{% endschema %}
