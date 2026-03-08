@@ -8,8 +8,6 @@ window.PRODUCTS = [
   {
     id: "calmcarry",
     name: "CalmCarry® — Find Your Peace",
-    brand: "GlowCo (The Glow Company)",
-    site: "theglowcompany.co",
     category: "Bien-etre / Sante mentale / Sommeil & Anxiete",
     market: "International",
     priceText: "A partir de 34 000 FCFA",
@@ -75,8 +73,6 @@ window.PRODUCTS = [
   {
     id: "cabin-care-ottocast",
     name: "Cabin Care by Ottocast",
-    brand: "Ottocast",
-    site: "ottocast.es",
     category: "Automobile / Accessoires voiture / CarPlay & Surveillance",
     market: "Europe (Espagne)",
     slogan: "Cuidado atrás, comodidad adelante — Surveillance arrière, confort avant",
@@ -164,8 +160,6 @@ window.PRODUCTS = [
   {
     id: "air-nova-smart-mouse",
     name: "Air Nova | Smart Mouse Co",
-    brand: "Smart Mouse Co",
-    site: "smartmouseco.com",
     category: "Tech / Informatique / Souris sans fil",
     market: "International",
     slogan: "One mouse. Endless possibilities.",
@@ -221,8 +215,6 @@ window.PRODUCTS = [
   {
     id: "travel-adapter-zealangel",
     name: "All-in-One Universal Travel Adapter",
-    brand: "ZealAngel",
-    site: "zealangel.com",
     category: "Voyage / Electronique / Adaptateur universel",
     market: "International",
     priceText: "30 000 FCFA",
@@ -281,8 +273,6 @@ window.PRODUCTS = [
   {
     id: "wifi-porter",
     name: "Wifi Porter",
-    brand: "Ten One Design",
-    site: "tenonedesign.com",
     category: "Tech / Maison connectee / Partage Wi-Fi",
     market: "International",
     slogan: "Help your guests get online with a simple tap",
@@ -361,8 +351,6 @@ window.PRODUCTS = [
   {
     id: "p50-tactical-torch",
     name: "LA Lampe Torche Ultra Puissante — P50 Tactical Torch",
-    brand: "Senaria",
-    site: "senariaecom.myshopify.com",
     category: "Maison / Securite / Outdoor / Eclairage",
     market: "Afrique francophone",
     priceText: "CFA 20 000",
@@ -419,8 +407,6 @@ window.PRODUCTS = [
   {
     id: "lanthome-whitening",
     name: "Pate Dentifrice LANTHOME™ — Blanchisseur de dents",
-    brand: "LANTHOME™",
-    site: "hw7jzc-z7.myshopify.com",
     category: "Beaute / Hygiene bucco-dentaire / Blanchiment dentaire",
     market: "Togo (toutes regions)",
     priceText: "CFA 19 000",
@@ -477,8 +463,6 @@ window.PRODUCTS = [
   {
     id: "tondeuse-4-en-1",
     name: "✂️ Tondeuse Professionnelle 4-en-1",
-    brand: "Daling DL-9289",
-    site: "kfi1sk-yw.myshopify.com",
     category: "Beaute / Grooming masculin / Tondeuse multifonction",
     market: "Togo (livraison nationale)",
     priceText: "CFA 23 000",
