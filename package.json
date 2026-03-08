@@ -1,0 +1,17 @@
+{
+  "name": "Ricky_shop",
+  "version": "1.0.0",
+  "description": "E-commerce site with 8 products - Direct WhatsApp ordering",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "dev": "npx http-server site -p 3000 -o"
+  },
+  "keywords": [
+    "ecommerce",
+    "shopify",
+    "products"
+  ],
+  "author": "Richogata",
+  "license": "MIT"
+}

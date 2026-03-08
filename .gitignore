@@ -1,0 +1,27 @@
+# Output des builds
+dist/
+build/
+.next/
+.vercel/
+
+# Node modules
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Fichiers système
+.DS_Store
+.env
+.env.local
+.env.*.local
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store

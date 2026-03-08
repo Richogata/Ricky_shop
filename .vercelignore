@@ -1,0 +1,20 @@
+# Shopify theme files (si tu les utilises pas pour le déploiement Vercel)
+assets/base.css
+assets/theme.js
+config/
+layout/
+locales/
+sections/
+snippets/
+templates/
+
+# Node modules (au cas où)
+node_modules/
+package-lock.json
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Build output (généré par le script)
+dist/
